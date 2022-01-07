@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+// weather API key = c541fab451df4f9f82220428220701
+// https://api.worldweatheronline.com/premium/v1/ski.ashx?key=c541fab451df4f9f82220428220701&q={#location}&format=json&num_of_days=7
+
 import './App.css';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import LogIn from './LogIn';
+import NavBar from './NavBar';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar/>
+      <Route exact path="/"><LogIn/></Route>
     </div>
   );
+
 }
 
 export default App;
