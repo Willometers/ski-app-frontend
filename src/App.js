@@ -4,15 +4,13 @@
 import './App.css';
 import React from 'react';
 import { Route } from 'react-router-dom';
-import LogIn from './LogIn';
-import NavBar from './NavBar';
+import NavBar from './features/NavBar';
 
 function App() {
 
   return (
     <div>
       <NavBar/>
-      <Route exact path="/"><LogIn/></Route>
     </div>
   );
 
