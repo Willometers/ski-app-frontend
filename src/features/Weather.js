@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import WeatherTile from "./WeatherTile";
-import { fetchWeather } from "./weatherSlice";
+import { fetchWeather } from "./FetchWeather";
 
 function Weather() {
-  const weather = useSelector((state) => state);
+  const weather = useSelector((state) => state.weather.entities);
 
   const dispatch = useDispatch();
 
@@ -12,9 +12,10 @@ function Weather() {
     dispatch(fetchWeather());
   }, [dispatch]);
 
+  console.log("state", weather)
+
   return (
     <div className="App">
-      <h1>Weather</h1>
       <WeatherTile weather={weather} />
     </div>
   );

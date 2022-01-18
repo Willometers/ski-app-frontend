@@ -5,12 +5,16 @@ import './App.css';
 import React from 'react';
 import { Route } from 'react-router-dom';
 import NavBar from './features/NavBar';
+import Weather from './features/Weather';
+import SearchForm from './features/CreateZipcode';
 
 function App() {
 
   return (
     <div>
       <NavBar/>
+      <SearchForm />
+      <Weather/>
     </div>
   );
 
