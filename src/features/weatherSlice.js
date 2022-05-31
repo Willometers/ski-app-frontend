@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { fetchWeather } from "./FetchWeather";
+import { fetchFiveDay } from "./FetchFiveDay";
 // import zipcode for search query from search form or from current location thingy
 
 const weatherSlice = createSlice({
@@ -12,8 +13,12 @@ const weatherSlice = createSlice({
 
     reducers: {
         zipcodeAdded(state, action) {
-          state.zipcode.push(action.payload);
+          state.zipcode = action.payload;
         },
+
+        fetchFiveDay(state, action) {
+            state.zipcode = action.payload
+        }
       },
 
     extraReducers: {
@@ -25,10 +30,17 @@ const weatherSlice = createSlice({
           state.entities = action.payload;
           state.status = "idle";
         },
+        // [fetchFiveDay.pending](state) {
+        //     state.status = "loading";
+        //   },
+        // [fetchFiveDay.fulfilled](state, action) {
+        //     state.entities = action.payload;
+        //     state.status = "idle";
+        // },
     },
 })
 
 // export actions
-export const { zipcodeAdded } = weatherSlice.actions;
+export const { zipcodeAdded  } = weatherSlice.actions;
 
 export default weatherSlice.reducer;

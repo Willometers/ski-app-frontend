@@ -24,3 +24,4 @@ yarn-error.log*
 
 #key
 src/features/APIKey.js
+src/features/FiveDayAPI.js

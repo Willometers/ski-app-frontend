@@ -12,10 +12,8 @@ function Weather() {
     dispatch(fetchWeather());
   }, [dispatch]);
 
-  console.log("state", weather)
-
   return (
-    <div className="App">
+    <div>
       <WeatherTile weather={weather} />
     </div>
   );

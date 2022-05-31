@@ -24,8 +24,8 @@ export default function CreateZipcode() {
         
         <div >
             <form onSubmit={handleSubmit}>
-            <input placeholder="Search by Zipcode" 
-            onChange={handleChange}/>
+            <input placeholder="Search Location" 
+                onChange={handleChange}/>
             </form>
         </div>
 
